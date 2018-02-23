@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html>
+<body>
+<button type="button" onclick=totalArray()>display a-z addresses</button>
+    <p id="demo"></p>
+
+<script>
+    var arr=[];
+function person(name,number) {
+    this.name = name;
+    this.number = number;
+    this.address ={
+        street:"120-1A",
+        city:"hyderabad",
+        totalAddr:function(){
+            return(this.street+","+this.city);
+        }
+    }
+        totalInfo=function(){
+            return("this is"+"&nbsp;"+this.name+"&nbsp;"+"with number"+"&nbsp;"+this.number+"&nbsp;"+"having address is"+" "+this.address.totalAddr());
+        }
+    }
+        function totalArray(){
+            var a2zArr=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+            for(i=0;i<a2zArr.length;i++){
+                arr.push(new person(a2zArr[i],i+1));
+            }
+            console.log(arr);
+        }
+    </script>
+
+</body>
+</html>
